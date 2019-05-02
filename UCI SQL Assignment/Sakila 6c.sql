@@ -1,0 +1,12 @@
+USE sakila;
+
+SELECT 	COUNT(FA.ACTOR_ID),
+		F.FILM_ID
+        
+FROM FILM AS F
+INNER JOIN FILM_ACTOR FA  ON F.FILM_ID = FA.FILM_ID 
+
+ GROUP BY FILM_ID ;      
+
+		
+		

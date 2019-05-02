@@ -1,0 +1,16 @@
+USE sakila;
+
+SELECT 	S.FIRST_NAME,
+		S.LAST_NAME,
+        -- STAFF.ADDRESS_ID,
+        PMT.STAFF_ID,
+        SUM(PMT.AMOUNT)
+        -- PMT.PAYMENT_DATE
+        
+FROM STAFF AS S
+LEFT JOIN PAYMENT PMT  ON S.STAFF_ID = PMT.STAFF_ID 
+
+GROUP BY STAFF_ID ;      
+
+		
+		
